@@ -1,0 +1,47 @@
+project setup --topLevelPackage ar.edu.um.ingsoftware --projectName "umbook"
+
+jpa setup --database MYSQL --provider HIBERNATE --hostName 127.0.0.1 --databaseName umbook --userName root
+
+
+entity jpa --class ~.reference.Persona --abstract
+field string --fieldName username --notNull 
+field string --fieldName password --notNull
+
+entity jpa --class ~.domain.Usuario  --extends ~.reference.Persona
+field string --fieldName email --notNull
+field string --fieldName nombre --notNull 
+field string --fieldName apellido --notNull
+field date --fieldName fechaNacimiento --type java.util.Calendar --past
+
+entity jpa --class ~.domain.Administrador  --extends ~.reference.Persona
+
+entity jpa --class ~.domain.Comentario
+field string --fieldName contenido --notNull
+field reference --fieldName autor --type ~.domain.Usuario
+field date --fieldName timestmp --type java.util.Calendar
+
+
+//GENERATE THE SPRING DATA JPA REPOSITORY
+repository jpa --all
+
+//GENERATE FINDERS
+finder add --name findByEmailEquals --entity ~.domain.Usuario
+finder add --name findByNombreLike --entity ~.domain.Usuario
+finder add --name findByApellidoLike --entity ~.domain.Usuario
+
+//GENERATE THE SERVICE LAYER
+service --all
+
+//GENERATE THE WEB LAYER
+web mvc setup
+web mvc view setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF
+
+
+
+
+
+
+
+
+
