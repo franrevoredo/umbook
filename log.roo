@@ -29,3 +29,31 @@ exit
 web mvc finder --all --responseType THYMELEAF --pathPrefix 'find'
 web mvc language --code es --useAsDefault 
 web mvc templates setup --type THYMELEAF 
+web mvc language --code es --useAsDefault 
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-06 19:23:08
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-06 19:23:31
+focus --class ~.domain.Usuario
+field list --fieldName comentarios --type ~.domain.Comentario --mappedBy listaDeComentarios --cardinality ONE_TO_MANY 
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-06 19:41:26
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-06 19:41:37
+exit
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-06 19:42:18
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-06 19:42:36
+focus --class ~.domain.Comentario 
+focus --class ~.domain.Usuario
+// [failed] field list --fieldName comentariosHechos --type ~.domain.Comentario --mappedBy autor  --cardinality ONE_TO_MANY 
+// [failed] field list --fieldName comentarios --type ~.domain.Comentario
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-06 19:53:59
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-06 19:54:16
+focus --class ~.domain.Usuario
+field list --fieldName comentarios --type ~.domain.Comentario
+focus --class ~.domain.Comentario
+focus --class ~.domain.Usuario
+field list --fieldName comentarios --type ~.domain.Comentario --cardinality MANY_TO_MANY 
+field list --fieldName comentarios --type ~.domain.Comentario
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-06 19:58:35
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-06 19:58:50
+// [failed] field list --fieldName comentariosHechos --type ~.domain.Comentario --mappedBy autor
+focus --class ~.domain.Usuario
+field list --fieldName comentariosHechos --type ~.domain.Comentario --mappedBy autor
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-06 23:36:33

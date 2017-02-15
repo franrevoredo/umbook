@@ -178,6 +178,13 @@
       <span id="contenido-error" class="help-block" data-th-if="${#fields.hasErrors('contenido')}" data-th-errors="*{contenido}">Error message.</span>
   </div>
 </div>
+<div class="form-group has-error has-feedback" id="comentario-timestmp-field" data-z="85daafcc" data-th-classappend="${#fields.hasErrors('timestmp')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="timestmp" class="col-md-3 control-label" data-th-text="#{label_comentario_timestmp}">timestmp</label>
+  <div class="col-md-3">
+    <input id="timestmp" name="timestmp" data-th-value="*{{timestmp}}" type="text" class="form-control datetimepicker" placeholder="timestmp" data-th-placeholder="#{label_comentario_timestmp}" data-th-attr="data-dateformat=${timestmp_date_format}" data-toggle="tooltip" /> <span data-th-classappend="${#fields.hasErrors('timestmp')}? 'glyphicon glyphicon-remove form-control-feedback'" data-th-if="${#fields.hasErrors('timestmp')}" aria-hidden="true"></span>
+     <span id="timestmp-error" class="help-block" data-th-if="${#fields.hasErrors('timestmp')}" data-th-errors="*{timestmp}">Error message.</span>
+  </div>
+</div>
 <div class="form-group has-error has-feedback" data-z="bdd4a592" id="comentario-autor-field" data-th-classappend="${#fields.hasErrors('autor')}? 'has-error has-feedback'" data-th-class="form-group">
     <label for="autor" class="col-md-3 control-label" data-th-text="#{label_comentario_autor}">Usuario</label>
     <div class="col-md-6">
@@ -188,13 +195,6 @@
       <span data-th-classappend="${#fields.hasErrors('autor')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('autor')}" aria-hidden="true"></span>
       <span id="autor-error" class="help-block" data-th-if="${#fields.hasErrors('autor')}" data-th-errors="*{autor}">Error message.</span>
     </div>
-</div>
-<div class="form-group has-error has-feedback" id="comentario-timestmp-field" data-z="85daafcc" data-th-classappend="${#fields.hasErrors('timestmp')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="timestmp" class="col-md-3 control-label" data-th-text="#{label_comentario_timestmp}">timestmp</label>
-  <div class="col-md-3">
-    <input id="timestmp" name="timestmp" data-th-value="*{{timestmp}}" type="text" class="form-control datetimepicker" placeholder="timestmp" data-th-placeholder="#{label_comentario_timestmp}" data-th-attr="data-dateformat=${timestmp_date_format}" data-toggle="tooltip" /> <span data-th-classappend="${#fields.hasErrors('timestmp')}? 'glyphicon glyphicon-remove form-control-feedback'" data-th-if="${#fields.hasErrors('timestmp')}" aria-hidden="true"></span>
-     <span id="timestmp-error" class="help-block" data-th-if="${#fields.hasErrors('timestmp')}" data-th-errors="*{timestmp}">Error message.</span>
-  </div>
 </div>
 
               </fieldset>

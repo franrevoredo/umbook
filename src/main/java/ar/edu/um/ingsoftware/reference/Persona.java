@@ -2,6 +2,8 @@ package ar.edu.um.ingsoftware.reference;
 import org.springframework.roo.addon.javabean.annotations.RooJavaBean;
 import org.springframework.roo.addon.javabean.annotations.RooToString;
 import org.springframework.roo.addon.jpa.annotations.entity.RooJpaEntity;
+
+import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -20,6 +22,7 @@ public abstract class Persona {
      *
      */
     @NotNull
+    @Column(unique=true)
     private String username;
 
     /**

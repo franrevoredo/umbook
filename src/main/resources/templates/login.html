@@ -109,12 +109,6 @@
                     adminname=${@environment.getProperty('springlets.security.auth.in-memory.admin.name')},
                     adminpasw=${@environment.getProperty('springlets.security.auth.in-memory.admin.password')}">
                     <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                    <span data-th-text="#{info_security_login}">You tried to access a
-                      restricted area of our application. By default, you can log in with:</span>
-                    <blockquote>
-                      <span data-th-if="${username}" data-th-text="|${username} / ${userpasw}|">"user/password"</span>
-                      <span data-th-if="${adminname}" data-th-text="|${adminname} / ${adminpasw}|">"admin/password"</span>
-                    </blockquote>
                   </div>
 
                   <div data-th-if="${param.error}" class="alert alert-danger" role="alert">
@@ -166,7 +160,7 @@
         <div class="col-sm-6 col-sm-offset-3">
           <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank" data-th-text="| Spring Roo © ${#calendars.format(#dates.createNow(),'yyyy')}|">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="/accessibility"><span data-th-text="#{label_accessibility}">Accessibility</span></a>
